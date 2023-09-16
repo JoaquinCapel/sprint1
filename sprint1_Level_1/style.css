@@ -1,0 +1,274 @@
+*,
+*::after,
+*::before {
+ box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* CAJA 1 max-width 1200px */
+
+header {
+    background-color: black;
+    width: 1200px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+nav {
+    width: 100%;
+    background-color: #36405c;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+
+}
+
+#int1_box1,
+#int3_box1 {
+    width: 17%;
+}
+
+#int2_box1 {
+    width: 60%;
+}
+
+#int1_box1,
+#int2_box1,
+#int3_box1 {
+    background-color: #fb5232;
+    height: 20px;
+}
+
+.titulo {
+    width: 100%;
+    background-color: rgb(255, 123, 0);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+
+}
+
+#int1_box2 {
+    width: 98%;
+    background-color: #f9d561;
+    height: 20px;
+}
+
+
+/* CAJA 2  max-width 1200px */
+
+main {
+    background-color: black;
+    width: 1200px;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+section {
+    width: 70%;
+    background-color: #424d61;
+    padding: 10px;
+    gap: 10px;
+}
+
+.firstLine,
+.secondLine,
+.thirdLine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+#first,
+#second,
+#third,
+#fourth {
+    width: 48%;
+    background-color: #0664a9;
+    height: 20px;
+    margin-bottom: 20px;
+}
+
+#fifth {
+    width: 98%;
+    background-color: #539cbc;
+    height: 20px;
+}
+
+aside {
+    width: 30%;
+    background-color: #ea2c37;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#up,
+#down {
+    width: 98%;
+    background-color: #f9d561;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+#down {
+    margin-bottom: 15%;
+}
+
+/* CAJA 3  max-width 1200px */
+
+footer {
+    background-color: black;
+    width: 1200px;
+    padding: 14px;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.box5 {
+    width: 100%;
+    background-color: orange;
+    padding: 10px;
+}
+
+
+/* Media Query TABLET  max-width 768px */
+
+
+@media (max-width: 768px) {
+    header {
+        width: 768px;
+        padding: 18px;
+        gap: 8px;
+    }
+
+    main {
+        background-color: yellow;
+        width: 768px;
+        padding: 14px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    section,
+    aside {
+        width: 100%;
+        padding: 14px;
+    }
+
+    #down {
+        margin-bottom: 0;
+    }
+
+    footer {
+        width: 768px;
+        padding: 14px;
+    }
+}
+
+
+/* Media Query PHONE  max-width 480px */
+
+@media (max-width: 480px) {
+    header {
+        width: 480px;
+        padding: 30px;
+        gap: 20px;
+    }
+
+    nav {
+        width: 100%;
+        padding: 15px;
+        flex-direction: column;
+        gap: 18px;
+        align-items: center
+    }
+
+    .titulo {
+        width: 100%;
+        padding: 15px;
+        background-color: rgb(253, 110, 21);
+    }
+
+    #int1_box2 {
+        background-color: rgb(255, 191, 0);
+    }
+
+    #int1_box1,
+    #int2_box1,
+    #int3_box1,
+    #int1_box2,
+    #first,
+    #second,
+    #third,
+    #fourth,
+    #fifth,
+    #up,
+    #down {
+        width: 100%;
+    }
+
+    main {
+        width: 480px;
+        padding: 30px;
+        gap: 20px;
+        background-color: #fbd304;
+    }
+
+    section {
+        width: 100%;
+        padding: 14px;
+        background-color: #10465d;
+    }
+
+    .firstLine,
+    .secondLine,
+    .thirdLine {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    #first,
+    #second,
+    #third,
+    #fourth {
+        background-color: #448c94;
+    }
+
+    #fifth {
+        background-color: #85cfb7;
+    }
+
+    aside {
+        width: 100%;
+        padding: 14px;
+        background-color: rgb(255, 81, 0);
+    }
+
+    #up,
+    #down {
+        background-color: rgb(252, 162, 71);
+    }
+
+    footer {
+        width: 480px;
+        padding: 30px;
+    }
+
+}

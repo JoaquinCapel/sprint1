@@ -1,0 +1,398 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ============ MENU ================== */
+
+header {
+    width: 1200px;
+    background-image: url("img/header.jpg");
+    background-position: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(144, 144, 144);
+}
+
+nav {
+    margin-top: 4%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: moveLeft 1s ease-in;
+}
+
+#fotoLogo {
+    width: 80px;
+    margin-left: 40%;
+}
+
+.menu {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+
+ul {
+    list-style-type: none;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#rrss {
+    justify-content: space-around;
+}
+
+.rrss {
+    width: 10%;
+    margin-right: 4%;
+}
+
+/* ==================== ESLOGAN ====================== */
+
+.titulo {
+    background-color: rgba(128, 128, 128, 0.167);
+    width: 85%;
+    height: 23%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    animation: moveRight 1s ease-in;
+}
+
+#textHead {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgba(255, 123, 0, 0.624);
+    font-size: xx-large;
+}
+
+/* ==================== SECCIONES ===================== */
+
+main {
+    width: 1200px;
+    margin-top: 10px;
+    background-color: white;
+    display: flex;
+    gap: 8px;
+}
+
+section {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    background-color: rgb(196, 196, 196);
+}
+
+.picture {
+    width: 100%;
+}
+
+.photo {
+    position: relative;
+}
+
+.date {
+    color: rgba(255, 247, 2, 0.68);
+    position: absolute;
+    top: 86%;
+    left: 2%;
+}
+
+h3 {
+    background-color: rgb(230, 98, 120);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Courier, monospace;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.10em;
+    padding-top: 7px;
+    padding-left: 6px;
+    padding-bottom: 2px;
+    margin-top: 1px;
+}
+
+.text {
+    column-count: 2;
+    color: rgb(90, 90, 90);
+}
+
+.row1,
+.row2 {
+    display: flex;
+    gap: 10px;
+}
+
+.cards {
+    width: 50%;
+    padding: 10px;
+    background-color: rgb(241, 241, 241);
+}
+
+#finalText {
+    text-align: center;
+}
+
+aside {
+    width: 20%;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(196, 196, 196);
+}
+
+/* ==================== FOOTER ======================= */
+
+footer {
+    width: 1200px;
+    background-color: rgb(196, 196, 196);
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#footerBg {
+    width: 96%;
+    background-color: rgb(241, 241, 241);
+}
+
+#textBg {
+    color: rgb(144, 144, 144);
+}
+
+/* ================== HOVER ================= */
+
+a:hover {
+    color: black;
+}
+
+.leerMas:hover {
+    color: orange;
+}
+
+ul li a {
+    position: relative;
+}
+
+ul li a:after {
+    position: absolute;
+    bottom: 7px;
+    left: 0px;
+    width: 100%;
+    height: 4px;
+    background-color: orange;
+    content: "";
+    opacity: 0;
+    transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+    transform: translateY(20px);
+}
+
+ul li a:hover:after {
+    opacity: 1;
+    transform: translateY(15px)
+}
+
+/* ================ KEYFRAMES =================== */
+
+@keyframes moveLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        opacity: 0;
+        transform: translate(300px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+/* Media Query TABLET  max-width 768px */
+
+@media (max-width: 768px) {
+    header {
+        width: 768px;
+        padding: 0;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+
+    #fotoLogo {
+        margin-left: 20%;
+    }
+
+    ul {
+        font-size: 1em;
+        justify-content: space-between;
+    }
+
+    #rrss {
+        gap: 15px;
+    }
+
+    .rrss {
+        margin-right: 6%;
+    }
+
+    #textHead {
+        font-size: x-large;
+    }
+
+    main {
+        width: 768px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    aside {
+        width: 768px;
+    }
+
+    .cards {
+        padding: 8px;
+    }
+
+    .date {
+        top: 82%;
+        left: 2%;
+    }
+
+    .text {
+        column-count: 1;
+    }
+
+    footer {
+        width: 768px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+/* Media Query PHONE  max-width 480px */
+
+
+@media (max-width: 480px) {
+
+    header {
+        background-position: left;
+        background-size: cover;
+        width: 480px;
+        height: 350px;
+        padding: 0;
+    }
+
+    #fotoLogo {
+        width: 50px;
+    }
+
+    a {
+        color: rgba(255, 96, 38, 0.78);
+    }
+
+    nav {
+        width: 90%;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 2%;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 10px
+    }
+
+    #rrss {
+        flex-direction: row;
+    }
+
+    .titulo {
+        width: 80%;
+        padding: 1%;
+    }
+
+    #textHead {
+        font-size: larger;
+        color: rgba(255, 247, 2, 0.56);
+    }
+
+    main {
+        width: 480px;
+        padding: 0;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    .cards {
+        padding: 8px;
+        width: 100%;
+    }
+
+    .row1,
+    .row2 {
+        gap: 14px;
+        padding: 4px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .date {
+        top: 82%;
+        left: 3%;
+    }
+
+    aside {
+        width: 480px;
+        padding: 10px;
+    }
+
+    footer {
+        width: 480px;
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+
+}
